@@ -24,12 +24,16 @@ public class GameScreen implements Screen {
     private long counter = 0;
     private int clickValue = 1;
 
-
-    @Override
-    public void show() {
+    public GameScreen() {
         spriteBatch = new SpriteBatch();
         stage = new Stage(new ScreenViewport(), spriteBatch);
         Gdx.input.setInputProcessor(stage);
+
+    }
+
+    @Override
+    public void show() {
+
 
         VisUI.load();
         Table table = new Table();

@@ -1,8 +1,9 @@
 package io.github.ClickerGame.entity;
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 
-public class Entity {
+public class Entity extends Actor {
 
     private transient Double maxLife;
     private transient Double life;
@@ -10,6 +11,10 @@ public class Entity {
     private boolean bigEntity;
     private int timesKilled;
     private String name;
+
+    public Entity() {
+
+    }
 
     public Double getMaxLife() {
         return maxLife;
