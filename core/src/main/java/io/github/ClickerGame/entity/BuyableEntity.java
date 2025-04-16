@@ -1,8 +1,9 @@
 package io.github.ClickerGame.entity;
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 
-public abstract class BuyableEntity {
+public abstract class BuyableEntity extends Actor {
 
     private String name;
     private String description;
@@ -12,8 +13,7 @@ public abstract class BuyableEntity {
     private Double baseValue;
 
     public Double setValue() {
-        Double value = 0.0;
-
+        value = baseValue * (level * 1.33);
 
         return 1.0;
     }

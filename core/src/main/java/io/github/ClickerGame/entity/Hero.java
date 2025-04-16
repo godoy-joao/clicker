@@ -4,4 +4,5 @@ public class Hero extends BuyableEntity{
 
     private Double dps;
 
+
 }

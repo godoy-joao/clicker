@@ -19,7 +19,9 @@ public class RandomBuff extends Entity{
         });
     }
 
-    public void setBigEntity() {
-        this.setBigEntity(MathUtils.random(1000) <= 10);
+    @Override
+    public void onKill() {
+
     }
+
 }

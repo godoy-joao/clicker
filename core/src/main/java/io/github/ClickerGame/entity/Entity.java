@@ -1,13 +1,15 @@
 package io.github.ClickerGame.entity;
 
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
-public class Entity extends Actor {
+public abstract class Entity extends Actor {
 
     private transient Double maxLife;
     private transient Double life;
-    private transient TextureRegion texture;
+    private transient Double spawnChance;
+    private TextureRegion texture;
     private boolean bigEntity;
     private int timesKilled;
     private String name;
@@ -44,8 +46,8 @@ public class Entity extends Actor {
         return bigEntity;
     }
 
-    public void setBigEntity(boolean bigEntity) {
-        this.bigEntity = bigEntity;
+    public void setBigEntity() {
+        this.bigEntity = (MathUtils.random(1000) <= 10);
     }
 
     public int getTimesKilled() {
@@ -63,4 +65,6 @@ public class Entity extends Actor {
     public void setName(String name) {
         this.name = name;
     }
+
+    public abstract void onKill();
 }

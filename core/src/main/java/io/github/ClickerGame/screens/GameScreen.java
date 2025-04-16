@@ -20,9 +20,6 @@ public class GameScreen implements Screen {
 
     private SpriteBatch spriteBatch;
     private Stage stage;
-    private VisLabel counterLabel;
-    private long counter = 0;
-    private int clickValue = 1;
 
     public GameScreen() {
         spriteBatch = new SpriteBatch();
@@ -33,41 +30,8 @@ public class GameScreen implements Screen {
 
     @Override
     public void show() {
-
-
         VisUI.load();
-        Table table = new Table();
-        table.setFillParent(true);
-        table.center();
 
-        counterLabel = new VisLabel("Pontos: 0");
-
-        VisTextButton clickButton = new VisTextButton("clique aqui");
-        clickButton.addListener(new ClickListener(){
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                counter += clickValue;
-                counterLabel.setText("Pontos: " + counter);
-            }
-        });
-
-        VisTextButton upgradeButton = new VisTextButton("Upgrade: 50 pontos");
-        upgradeButton.addListener(new ClickListener() {
-           @Override
-           public void clicked(InputEvent event, float x, float y) {
-               if (counter >= 50) {
-                   counter -= 50;
-                   clickValue +=1;
-                   counterLabel.setText("Pontos: "+counter);
-               }
-           }
-        });
-
-        table.add(counterLabel).padBottom(20).row();
-        table.add(clickButton).width(200).height(70).padBottom(20).row();
-        table.add(upgradeButton).width(200).height(60);
-
-        stage.addActor(table);
 
     }
 
