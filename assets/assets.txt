@@ -1,3 +1,12 @@
+sprites/enemy/cranio.png
+sprites/enemy/fantasma.old.png
+sprites/enemy/fantasma.png
+sprites/enemy/geléia.png
+sprites/enemy/minhoca.png
+sprites/enemy/morto-vivo.png
+sprites/ui/heroShopOpen.png
+sprites/ui/notification.png
+sprites/ui/skillShopOpen.png
 ui/font-list.fnt
 ui/font-subtitle.fnt
 ui/font-window.fnt

@@ -14,5 +14,17 @@ public class GameManager {
     public static List<Hero> playerHeroes;
     public static Enemy currentEnemy;
     public static Map<String, DamageSource> damageSourceList;
+    private static long level;
 
+
+    public static long getLevel() {
+        return level;
+    }
+    public static void setLevel(long newLevel){
+        level = newLevel;
+    }
+    public static void skipLevels(long skips) {
+        level +=skips;
+
+    }
 }

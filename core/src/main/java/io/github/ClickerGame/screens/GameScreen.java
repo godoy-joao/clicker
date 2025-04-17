@@ -12,25 +12,29 @@ import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.VisLabel;
 import com.kotcrab.vis.ui.widget.VisTextButton;
+import io.github.ClickerGame.manager.GameManager;
+import io.github.ClickerGame.ui.GameUI;
 
 /**
  * First screen of the application. Displayed after the application is created.
  */
 public class GameScreen implements Screen {
 
-    private SpriteBatch spriteBatch;
+    private SpriteBatch batch;
     private Stage stage;
+    private GameUI gameUI;
+    private ScreenViewport viewport;
 
     public GameScreen() {
-        spriteBatch = new SpriteBatch();
-        stage = new Stage(new ScreenViewport(), spriteBatch);
+        viewport = new ScreenViewport();
+        batch = new SpriteBatch();
+        stage = new Stage(viewport, batch);
         Gdx.input.setInputProcessor(stage);
-
+        gameUI = new GameUI(batch, viewport);
     }
 
     @Override
     public void show() {
-        VisUI.load();
 
 
     }
@@ -38,8 +42,14 @@ public class GameScreen implements Screen {
     @Override
     public void render(float delta) {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        stage.act(delta);
-        stage.draw();
+
+        batch.setProjectionMatrix(viewport.getCamera().combined);
+        batch.begin();
+
+        batch.end();
+
+        gameUI.updateUI(phase, currentMonster.getHp(), currentMonster.getMaxHp());
+        gameUI.draw();
     }
 
     @Override
@@ -65,6 +75,6 @@ public class GameScreen implements Screen {
     @Override
     public void dispose() {
         stage.dispose();
-        spriteBatch.dispose();
+        batch.dispose();
     }
 }
