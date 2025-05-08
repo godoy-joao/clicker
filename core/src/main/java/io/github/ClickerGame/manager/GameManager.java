@@ -7,6 +7,7 @@ import io.github.ClickerGame.game.DamageSource;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class GameManager {
 
@@ -25,6 +26,13 @@ public class GameManager {
     }
     public static void skipLevels(long skips) {
         level +=skips;
+
+    }
+
+
+    public static void setup() {
+        level = 1;
+        currentEnemy = new Enemy();
 
     }
 }

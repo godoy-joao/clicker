@@ -6,8 +6,8 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 
 public abstract class Entity extends Actor {
 
-    private transient Double maxLife;
-    private transient Double life;
+    private transient Long maxLife;
+    private transient Long life;
     private transient Double spawnChance;
     private TextureRegion texture;
     private boolean bigEntity;
@@ -18,19 +18,19 @@ public abstract class Entity extends Actor {
 
     }
 
-    public Double getMaxLife() {
+    public Long getMaxLife() {
         return maxLife;
     }
 
-    public void setMaxLife(Double maxLife) {
+    public void setMaxLife(Long maxLife) {
         this.maxLife = maxLife;
     }
 
-    public Double getLife() {
+    public Long getLife() {
         return life;
     }
 
-    public void setLife(Double life) {
+    public void setLife(Long life) {
         this.life = life;
     }
 

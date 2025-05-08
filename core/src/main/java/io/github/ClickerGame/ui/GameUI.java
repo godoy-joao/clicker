@@ -53,7 +53,7 @@ public class GameUI {
 
     private void createMonsterDisplay() {
         root.row();
-
+        root.add(GameManager.currentEnemy);
         root.add().expand().fill();
     }
 
@@ -97,9 +97,11 @@ public class GameUI {
         root.add(tabbedPane.getTable()).right().top();
     }
 
-    public void updateUI( int currentHp, int maxHp) {
-        levelLabel.setText("Fase: " + GameManager.);
-        monsterHpLabel.setText("Vida: " + currentHp + " / " + maxHp);
+    public void updateUI() {
+
+        levelLabel.setText("Fase: " + GameManager.getLevel());
+        monsterHpLabel.setText("Vida: " + GameManager.currentEnemy.getLife() + " / " + GameManager.currentEnemy.getMaxLife());
+        
     }
 
     public void draw() {

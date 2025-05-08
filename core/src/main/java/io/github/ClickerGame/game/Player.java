@@ -15,5 +15,6 @@ public class Player {
     public static Map<String, Effect> effects = new HashMap<>();
     public static double damage = level * baseDamage;
     public static long prestigeLevel;
+    public static long gold;
 
 }

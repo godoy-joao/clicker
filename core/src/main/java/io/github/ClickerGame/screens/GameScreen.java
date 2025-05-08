@@ -26,6 +26,7 @@ public class GameScreen implements Screen {
     private ScreenViewport viewport;
 
     public GameScreen() {
+        GameManager.setup();
         viewport = new ScreenViewport();
         batch = new SpriteBatch();
         stage = new Stage(viewport, batch);
@@ -48,7 +49,7 @@ public class GameScreen implements Screen {
 
         batch.end();
 
-        gameUI.updateUI(phase, currentMonster.getHp(), currentMonster.getMaxHp());
+        gameUI.updateUI();
         gameUI.draw();
     }
 

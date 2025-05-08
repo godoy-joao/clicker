@@ -1,7 +1,7 @@
 sprites/enemy/cranio.png
 sprites/enemy/fantasma.old.png
 sprites/enemy/fantasma.png
-sprites/enemy/geléia.png
+sprites/enemy/geleia.png
 sprites/enemy/minhoca.png
 sprites/enemy/morto-vivo.png
 sprites/ui/heroShopOpen.png
