@@ -9,7 +9,7 @@ public class ResourceManager {
     public static TextureRegion getEnemyTexture(String enemyName) {
         try {
             Texture texture = new Texture("sprites/enemy/"+enemyName+".png");
-            return new TextureRegion(texture,512,512);
+            return new TextureRegion(texture);
         } catch (Exception e) {
             e.printStackTrace();
         }

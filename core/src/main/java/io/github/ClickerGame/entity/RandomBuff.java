@@ -24,4 +24,9 @@ public class RandomBuff extends Entity{
 
     }
 
+    @Override
+    public void onClick() {
+
+    }
+
 }

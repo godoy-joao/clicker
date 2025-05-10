@@ -35,4 +35,8 @@ public class GameManager {
         currentEnemy = new Enemy();
 
     }
+
+    public static void getNewEnemy() {
+        currentEnemy = new Enemy();
+    }
 }

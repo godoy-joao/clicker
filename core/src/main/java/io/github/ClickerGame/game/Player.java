@@ -10,11 +10,15 @@ public class Player {
 
     public static String name;
     public static long level;
-    public static double dps;
-    public static double baseDamage;
+    public static Long dps;
+    public static Long baseDamage;
     public static Map<String, Effect> effects = new HashMap<>();
-    public static double damage = level * baseDamage;
+    public static Long damage;
     public static long prestigeLevel;
     public static long gold;
+
+    public static Long getDamage() {
+        return 2L;
+    }
 
 }
